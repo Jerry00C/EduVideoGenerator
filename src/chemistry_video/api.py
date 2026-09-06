@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 
 from .artifacts import LocalArtifactStore
 from .audio import OpenAITTSProvider, TTSProvider
+from .manim_rendering import ManimRenderer, ManimRendererProvider, OpenAIManimCodeProvider
 from .chemistry import (
     ChemistryVerifier,
     GPTReasoner,
@@ -40,6 +41,7 @@ class VideoService:
         pedagogy: Optional[PedagogyProvider] = None,
         scene_planner: Optional[ScenePlannerProvider] = None,
         tts_provider: Optional[TTSProvider] = None,
+        visual_renderer: Optional[ManimRendererProvider] = None,
     ):
         self.repository = SQLiteJobRepository(database_path)
         self.artifacts = LocalArtifactStore(artifact_root)
@@ -50,6 +52,7 @@ class VideoService:
             pedagogy = GPTPedagogyAdapter(client)
             scene_planner = GPTScenePlanner(client)
             tts_provider = OpenAITTSProvider()
+            visual_renderer = ManimRenderer(OpenAIManimCodeProvider())
         self.pipeline = FakePipeline(
             self.repository,
             self.artifacts,
@@ -58,6 +61,7 @@ class VideoService:
             pedagogy,
             scene_planner,
             tts_provider,
+            visual_renderer,
         )
         self.tasks: set[asyncio.Task[None]] = set()
 
@@ -89,6 +93,7 @@ def create_app(
     pedagogy: Optional[PedagogyProvider] = None,
     scene_planner: Optional[ScenePlannerProvider] = None,
     tts_provider: Optional[TTSProvider] = None,
+    visual_renderer: Optional[ManimRendererProvider] = None,
 ) -> FastAPI:
     service = VideoService(
         database_path,
@@ -98,6 +103,7 @@ def create_app(
         pedagogy,
         scene_planner,
         tts_provider,
+        visual_renderer,
     )
 
     @asynccontextmanager

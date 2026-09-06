@@ -8,6 +8,7 @@ from typing import List, Optional, Union
 from .artifacts import LocalArtifactStore
 from .audio import FakeTTSProvider, TTSProvider, generate_segment_audio
 from .chemistry import ChemistryVerifier, FakeGPTReasoner, ReasonerProvider
+from .manim_rendering import FakeManimRenderer, ManimRendererProvider
 from .pedagogy import FakePedagogyAdapter, PedagogyProvider
 from .scene_planning import FakeScenePlanner, ScenePlannerProvider
 from .domain import (
@@ -48,6 +49,7 @@ class FakePipeline:
         pedagogy: Optional[PedagogyProvider] = None,
         scene_planner: Optional[ScenePlannerProvider] = None,
         tts_provider: Optional[TTSProvider] = None,
+        visual_renderer: Optional[ManimRendererProvider] = None,
         max_correction_attempts: int = 2,
     ):
         self.repository = repository
@@ -57,6 +59,7 @@ class FakePipeline:
         self.pedagogy = pedagogy or FakePedagogyAdapter()
         self.scene_planner = scene_planner or FakeScenePlanner()
         self.tts_provider = tts_provider or FakeTTSProvider()
+        self.visual_renderer = visual_renderer or FakeManimRenderer()
         self.max_correction_attempts = max_correction_attempts
 
     async def run(self, job: VideoResponse) -> None:
@@ -78,6 +81,7 @@ class FakePipeline:
             job.current_stage = stage
             if stage == PipelineStageName.UPLOADING:
                 job.transition(JobStatus.UPLOADING)
+            self.repository.update(job)
             try:
                 result = await self.execute_stage(job, stage)
             except Exception as exc:
@@ -206,6 +210,32 @@ class FakePipeline:
                 stage=stage,
                 status=StageResultStatus.SUCCEEDED,
                 artifacts=[*audio_artifacts, stage_artifact],
+                started_at=utc_now(),
+                completed_at=utc_now(),
+            )
+
+        if stage == PipelineStageName.VISUAL_GENERATION:
+            scene_plan = self._read_scene_plan(job)
+            visual_artifacts: List[ArtifactRef] = []
+            for scene in scene_plan.scenes:
+                visual_artifacts.extend(
+                    await self.visual_renderer.render_scene(
+                        video_id=job.id,
+                        scene_plan=scene_plan,
+                        scene=scene,
+                        artifacts=self.artifacts,
+                    )
+                )
+            stage_artifact = self.artifacts.write(
+                job.id,
+                f"stages/{stage.value}.json",
+                (f'{{"stage":"{stage.value}","scene_count":{len(scene_plan.scenes)}}}').encode("utf-8"),
+                "application/json",
+            )
+            return StageResult(
+                stage=stage,
+                status=StageResultStatus.SUCCEEDED,
+                artifacts=[*visual_artifacts, stage_artifact],
                 started_at=utc_now(),
                 completed_at=utc_now(),
             )

@@ -54,6 +54,10 @@ async def test_create_video_runs_fake_pipeline_and_retrieves_artifact(client, tm
     audio_files = list((tmp_path / "artifacts" / video_id / "audio").glob("*.mp3"))
     segment_count = sum(len(scene["narration_segments"]) for scene in scene_plan["scenes"])
     assert len(audio_files) == segment_count
+    visual_code_files = list((tmp_path / "artifacts" / video_id / "visual").glob("*/final_code.json"))
+    visual_video_files = list((tmp_path / "artifacts" / video_id / "visual").glob("*/scene.mp4"))
+    assert len(visual_code_files) == len(scene_plan["scenes"])
+    assert len(visual_video_files) == len(scene_plan["scenes"])
 
     artifact = await client.get(f"/videos/{video_id}/artifact")
     assert artifact.status_code == 200
