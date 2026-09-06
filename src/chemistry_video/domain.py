@@ -27,6 +27,7 @@ class PipelineStageName(str, Enum):
     PEDAGOGY_ADAPTATION = "pedagogy_adaptation"
     SCRIPT_SCENE_PLANNING = "script_scene_planning"
     AUDIO_GENERATION = "audio_generation"
+    DRAFT_RENDERING = "draft_rendering"
     VISUAL_GENERATION = "visual_generation"
     SCENE_COMPOSITION = "scene_composition"
     QUALITY_CHECKING = "quality_checking"

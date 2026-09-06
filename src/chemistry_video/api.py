@@ -15,7 +15,13 @@ from dotenv import load_dotenv
 
 from .artifacts import LocalArtifactStore
 from .audio import OpenAITTSProvider, TTSProvider
-from .manim_rendering import ManimRenderer, ManimRendererProvider, OpenAIManimCodeProvider
+from .composition import FFmpegSceneComposer, SceneComposer
+from .manim_rendering import (
+    ManimRenderer,
+    ManimRendererProvider,
+    OpenAIManimCodeProvider,
+    OpenAIVisualCritic,
+)
 from .chemistry import (
     ChemistryVerifier,
     GPTReasoner,
@@ -42,6 +48,7 @@ class VideoService:
         scene_planner: Optional[ScenePlannerProvider] = None,
         tts_provider: Optional[TTSProvider] = None,
         visual_renderer: Optional[ManimRendererProvider] = None,
+        scene_composer: Optional[SceneComposer] = None,
     ):
         self.repository = SQLiteJobRepository(database_path)
         self.artifacts = LocalArtifactStore(artifact_root)
@@ -52,7 +59,11 @@ class VideoService:
             pedagogy = GPTPedagogyAdapter(client)
             scene_planner = GPTScenePlanner(client)
             tts_provider = OpenAITTSProvider()
-            visual_renderer = ManimRenderer(OpenAIManimCodeProvider())
+            visual_renderer = ManimRenderer(
+                OpenAIManimCodeProvider(),
+                critic=OpenAIVisualCritic(),
+            )
+            scene_composer = FFmpegSceneComposer()
         self.pipeline = FakePipeline(
             self.repository,
             self.artifacts,
@@ -62,6 +73,7 @@ class VideoService:
             scene_planner,
             tts_provider,
             visual_renderer,
+            scene_composer,
         )
         self.tasks: set[asyncio.Task[None]] = set()
 
@@ -94,6 +106,7 @@ def create_app(
     scene_planner: Optional[ScenePlannerProvider] = None,
     tts_provider: Optional[TTSProvider] = None,
     visual_renderer: Optional[ManimRendererProvider] = None,
+    scene_composer: Optional[SceneComposer] = None,
 ) -> FastAPI:
     service = VideoService(
         database_path,
@@ -104,6 +117,7 @@ def create_app(
         scene_planner,
         tts_provider,
         visual_renderer,
+        scene_composer,
     )
 
     @asynccontextmanager

@@ -233,6 +233,22 @@ Final validated video
 
 ## Component Responsibilities
 
+### Manual FFmpeg Composition Test
+
+To compose an existing job without rerunning the API or LLM stages, use the
+Python 3.11 environment and pass an existing artifact ID:
+
+```bash
+source .venv311/bin/activate
+PYTHONPATH=src python scripts/manual_compose.py vid_abc123
+```
+
+The command reads `scene_plan.json`, copies each scene's draft MP4 and ordered
+narration MP3 files into `scene_composition/`, muxes audio and video with FFmpeg,
+and creates `artifacts/<video_id>/final.mp4` by concatenating the composed scenes.
+It prints a JSON list of the generated artifact paths. The command requires
+`ffmpeg` and `ffprobe` on `PATH`.
+
 | Component | Responsibility |
 |---|---|
 | Chemistry Reasoner | Solve the question, identify concepts and assumptions, and produce structured chemistry content. |

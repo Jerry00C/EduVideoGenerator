@@ -3,11 +3,13 @@
 from __future__ import annotations
 
 import asyncio
+import json
 from typing import List, Optional, Union
 
 from .artifacts import LocalArtifactStore
 from .audio import FakeTTSProvider, TTSProvider, generate_segment_audio
 from .chemistry import ChemistryVerifier, FakeGPTReasoner, ReasonerProvider
+from .composition import FakeSceneComposer, SceneComposer
 from .manim_rendering import FakeManimRenderer, ManimRendererProvider
 from .pedagogy import FakePedagogyAdapter, PedagogyProvider
 from .scene_planning import FakeScenePlanner, ScenePlannerProvider
@@ -33,6 +35,7 @@ class FakePipeline:
         PipelineStageName.PEDAGOGY_ADAPTATION,
         PipelineStageName.SCRIPT_SCENE_PLANNING,
         PipelineStageName.AUDIO_GENERATION,
+        PipelineStageName.DRAFT_RENDERING,
         PipelineStageName.VISUAL_GENERATION,
         PipelineStageName.SCENE_COMPOSITION,
         PipelineStageName.QUALITY_CHECKING,
@@ -50,6 +53,7 @@ class FakePipeline:
         scene_planner: Optional[ScenePlannerProvider] = None,
         tts_provider: Optional[TTSProvider] = None,
         visual_renderer: Optional[ManimRendererProvider] = None,
+        scene_composer: Optional[SceneComposer] = None,
         max_correction_attempts: int = 2,
     ):
         self.repository = repository
@@ -60,6 +64,7 @@ class FakePipeline:
         self.scene_planner = scene_planner or FakeScenePlanner()
         self.tts_provider = tts_provider or FakeTTSProvider()
         self.visual_renderer = visual_renderer or FakeManimRenderer()
+        self.scene_composer = scene_composer or FakeSceneComposer()
         self.max_correction_attempts = max_correction_attempts
 
     async def run(self, job: VideoResponse) -> None:
@@ -214,22 +219,51 @@ class FakePipeline:
                 completed_at=utc_now(),
             )
 
-        if stage == PipelineStageName.VISUAL_GENERATION:
+        if stage in {PipelineStageName.DRAFT_RENDERING, PipelineStageName.VISUAL_GENERATION}:
             scene_plan = self._read_scene_plan(job)
             visual_artifacts: List[ArtifactRef] = []
-            for scene in scene_plan.scenes:
-                visual_artifacts.extend(
-                    await self.visual_renderer.render_scene(
-                        video_id=job.id,
-                        scene_plan=scene_plan,
-                        scene=scene,
-                        artifacts=self.artifacts,
+            draft = stage == PipelineStageName.DRAFT_RENDERING
+            try:
+                for scene in scene_plan.scenes:
+                    visual_artifacts.extend(
+                        await self.visual_renderer.render_scene(
+                            video_id=job.id,
+                            scene_plan=scene_plan,
+                            scene=scene,
+                            artifacts=self.artifacts,
+                            feedback_enabled=not draft,
+                            artifact_namespace="draft_visual" if draft else "visual",
+                        )
                     )
+            except Exception as exc:
+                self.artifacts.write(
+                    job.id,
+                    f"stages/{stage.value}.json",
+                    json.dumps(
+                        {
+                            "stage": stage.value,
+                            "status": "failed",
+                            "scene_count": len(scene_plan.scenes),
+                            "error": str(exc),
+                            "artifacts": [artifact.model_dump(mode="json") for artifact in visual_artifacts],
+                        },
+                        indent=2,
+                    ).encode("utf-8"),
+                    "application/json",
                 )
+                raise
             stage_artifact = self.artifacts.write(
                 job.id,
                 f"stages/{stage.value}.json",
-                (f'{{"stage":"{stage.value}","scene_count":{len(scene_plan.scenes)}}}').encode("utf-8"),
+                json.dumps(
+                    {
+                        "stage": stage.value,
+                        "status": "succeeded",
+                        "scene_count": len(scene_plan.scenes),
+                        "artifacts": [artifact.model_dump(mode="json") for artifact in visual_artifacts],
+                    },
+                    indent=2,
+                ).encode("utf-8"),
                 "application/json",
             )
             return StageResult(
@@ -240,12 +274,119 @@ class FakePipeline:
                 completed_at=utc_now(),
             )
 
+        if stage == PipelineStageName.SCENE_COMPOSITION:
+            scene_plan = self._read_scene_plan(job)
+            composition_artifacts: List[ArtifactRef] = []
+            composition_records = []
+            for scene in scene_plan.scenes:
+                scene_root = f"scene_composition/{scene.id}"
+                draft_video_path = f"draft_visual/{scene.id}/scene.mp4"
+                draft_video = self.artifacts.resolve(job.id, draft_video_path)
+                if not draft_video.is_file():
+                    raise FileNotFoundError(f"draft scene video is missing: {draft_video_path}")
+
+                draft_ref = self.artifacts.write(
+                    job.id,
+                    f"{scene_root}/draft_scene.mp4",
+                    draft_video.read_bytes(),
+                    "video/mp4",
+                )
+                composition_artifacts.append(draft_ref)
+                audio_refs = []
+                for segment in scene.narration_segments:
+                    source_path = f"audio/{segment.id}.mp3"
+                    audio_path = self.artifacts.resolve(job.id, source_path)
+                    if not audio_path.is_file():
+                        raise FileNotFoundError(f"narration audio is missing: {source_path}")
+                    audio_ref = self.artifacts.write(
+                        job.id,
+                        f"{scene_root}/audio/{segment.id}.mp3",
+                        audio_path.read_bytes(),
+                        "audio/mpeg",
+                    )
+                    composition_artifacts.append(audio_ref)
+                    audio_refs.append(audio_ref.path)
+
+                composition_artifacts.extend(
+                    self.scene_composer.compose_scene(
+                        video_id=job.id,
+                        scene=scene,
+                        scene_directory=self.artifacts.resolve(job.id, scene_root),
+                        draft_video=draft_video,
+                        audio_files=[
+                            self.artifacts.resolve(job.id, f"{scene_root}/audio/{segment.id}.mp3")
+                            for segment in scene.narration_segments
+                        ],
+                        artifacts=self.artifacts,
+                    )
+                )
+
+                composition_records.append(
+                    {
+                        "scene_id": scene.id,
+                        "draft_video": draft_ref.path,
+                        "audio_segments": audio_refs,
+                        "narration_segment_ids": [segment.id for segment in scene.narration_segments],
+                        "status": "composed",
+                    }
+                )
+
+            composition_manifest = self.artifacts.write(
+                job.id,
+                "scene_composition/composition.json",
+                json.dumps(
+                    {
+                        "stage": stage.value,
+                        "status": "succeeded",
+                        "scenes": composition_records,
+                    },
+                    indent=2,
+                ).encode("utf-8"),
+                "application/json",
+            )
+            composition_artifacts.append(composition_manifest)
+            stage_artifact = self.artifacts.write(
+                job.id,
+                f"stages/{stage.value}.json",
+                json.dumps(
+                    {
+                        "stage": stage.value,
+                        "status": "succeeded",
+                        "scene_count": len(composition_records),
+                        "artifacts": [artifact.model_dump(mode="json") for artifact in composition_artifacts],
+                    },
+                    indent=2,
+                ).encode("utf-8"),
+                "application/json",
+            )
+            composition_artifacts.append(stage_artifact)
+            return StageResult(
+                stage=stage,
+                status=StageResultStatus.SUCCEEDED,
+                artifacts=composition_artifacts,
+                started_at=utc_now(),
+                completed_at=utc_now(),
+            )
+
         relative_path = f"stages/{stage.value}.json"
         content = (f'{{"stage":"{stage.value}","video_id":"{job.id}"}}').encode("utf-8")
         artifact = self.artifacts.write(job.id, relative_path, content, "application/json")
         artifacts = [artifact]
+        if stage == PipelineStageName.UPLOADING:
+            scene_plan = self._read_scene_plan(job)
+            scene_files = [
+                self.artifacts.resolve(job.id, f"scene_composition/{scene.id}/scene.mp4")
+                for scene in scene_plan.scenes
+            ]
+            artifacts.append(
+                self.scene_composer.concatenate(
+                    video_id=job.id,
+                    scene_files=scene_files,
+                    artifacts=self.artifacts,
+                )
+            )
         if stage == PipelineStageName.COMPLETED:
-            artifacts.append(self.artifacts.write(job.id, "final.mp4", b"fake video artifact", "video/mp4"))
+            pass
         return StageResult(
             stage=stage,
             status=StageResultStatus.SUCCEEDED,
