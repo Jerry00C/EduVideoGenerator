@@ -30,6 +30,18 @@ Generate a verified, high-school-level chemistry explainer video from a single q
 
 ## Architecture
 
+### GPT Chemistry Providers
+
+When `OPENAI_API_KEY` is configured, the service uses the OpenAI Responses API for chemistry reasoning and independent semantic review. Without the key, deterministic fake providers remain active for local tests.
+
+```bash
+export OPENAI_API_KEY="your-api-key"
+export OPENAI_MODEL="gpt-5.5"
+PYTHONPATH=src python -m uvicorn chemistry_video.api:app --reload
+```
+
+The reasoner sends a teenager-safe system prompt, the stable chemistry developer prompt, and the serialized user request. Responses use strict JSON Schema output based on `ReasoningOutput`, medium reasoning effort, and low verbosity. Molecules use `{ "name": "water", "smiles": "O" }`; prose descriptions must not be placed in `smiles`. Verification remains deterministic and uses Pydantic, SymPy, Pint, ChemPy, and RDKit; it does not call GPT.
+
 ```text
 Chemistry question
         ↓
@@ -93,7 +105,6 @@ queued
 processing
 completed
 failed
-uploaded
 ```
 
 Recommended stages while `status = processing`:
