@@ -2,6 +2,24 @@
 
 Generate a verified, high-school-level chemistry explainer video from a single question.
 
+## Example
+
+**Question:** “What is the difference between an atom and a molecule?”
+
+```json
+{
+  "question": "What is the difference between an atom and a molecule?",
+  "learner_level": "high_school",
+  "duration_seconds": 240
+}
+```
+
+▶️ [Watch the generated video](artifacts/vid_1a500da3acc6/final.mp4)
+
+The example video is generated locally and stored under `artifacts/`, which is
+excluded from version control. Run the pipeline to generate your own videos in
+the same location.
+
 ## V1 Scope
 
 - **Domain:** General chemistry
