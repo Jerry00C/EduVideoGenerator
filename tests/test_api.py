@@ -1,4 +1,5 @@
 import asyncio
+import json
 from pathlib import Path
 
 import httpx
@@ -49,6 +50,10 @@ async def test_create_video_runs_fake_pipeline_and_retrieves_artifact(client, tm
     assert (tmp_path / "artifacts" / video_id / "verification.json").is_file()
     assert (tmp_path / "artifacts" / video_id / "pedagogy.json").is_file()
     assert (tmp_path / "artifacts" / video_id / "scene_plan.json").is_file()
+    scene_plan = json.loads((tmp_path / "artifacts" / video_id / "scene_plan.json").read_text())
+    audio_files = list((tmp_path / "artifacts" / video_id / "audio").glob("*.mp3"))
+    segment_count = sum(len(scene["narration_segments"]) for scene in scene_plan["scenes"])
+    assert len(audio_files) == segment_count
 
     artifact = await client.get(f"/videos/{video_id}/artifact")
     assert artifact.status_code == 200

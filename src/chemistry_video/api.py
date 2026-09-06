@@ -14,6 +14,7 @@ from fastapi.responses import FileResponse
 from dotenv import load_dotenv
 
 from .artifacts import LocalArtifactStore
+from .audio import OpenAITTSProvider, TTSProvider
 from .chemistry import (
     ChemistryVerifier,
     GPTReasoner,
@@ -38,6 +39,7 @@ class VideoService:
         verifier: Optional[ChemistryVerifier] = None,
         pedagogy: Optional[PedagogyProvider] = None,
         scene_planner: Optional[ScenePlannerProvider] = None,
+        tts_provider: Optional[TTSProvider] = None,
     ):
         self.repository = SQLiteJobRepository(database_path)
         self.artifacts = LocalArtifactStore(artifact_root)
@@ -47,7 +49,16 @@ class VideoService:
             verifier = ChemistryVerifier()
             pedagogy = GPTPedagogyAdapter(client)
             scene_planner = GPTScenePlanner(client)
-        self.pipeline = FakePipeline(self.repository, self.artifacts, reasoner, verifier, pedagogy, scene_planner)
+            tts_provider = OpenAITTSProvider()
+        self.pipeline = FakePipeline(
+            self.repository,
+            self.artifacts,
+            reasoner,
+            verifier,
+            pedagogy,
+            scene_planner,
+            tts_provider,
+        )
         self.tasks: set[asyncio.Task[None]] = set()
 
     def create_job(self, request: VideoRequest) -> VideoResponse:
@@ -77,8 +88,17 @@ def create_app(
     verifier: Optional[ChemistryVerifier] = None,
     pedagogy: Optional[PedagogyProvider] = None,
     scene_planner: Optional[ScenePlannerProvider] = None,
+    tts_provider: Optional[TTSProvider] = None,
 ) -> FastAPI:
-    service = VideoService(database_path, artifact_root, reasoner, verifier, pedagogy, scene_planner)
+    service = VideoService(
+        database_path,
+        artifact_root,
+        reasoner,
+        verifier,
+        pedagogy,
+        scene_planner,
+        tts_provider,
+    )
 
     @asynccontextmanager
     async def lifespan(_: FastAPI) -> AsyncIterator[None]:

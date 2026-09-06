@@ -6,6 +6,7 @@ import asyncio
 from typing import List, Optional, Union
 
 from .artifacts import LocalArtifactStore
+from .audio import FakeTTSProvider, TTSProvider, generate_segment_audio
 from .chemistry import ChemistryVerifier, FakeGPTReasoner, ReasonerProvider
 from .pedagogy import FakePedagogyAdapter, PedagogyProvider
 from .scene_planning import FakeScenePlanner, ScenePlannerProvider
@@ -46,6 +47,7 @@ class FakePipeline:
         verifier: Optional[ChemistryVerifier] = None,
         pedagogy: Optional[PedagogyProvider] = None,
         scene_planner: Optional[ScenePlannerProvider] = None,
+        tts_provider: Optional[TTSProvider] = None,
         max_correction_attempts: int = 2,
     ):
         self.repository = repository
@@ -54,6 +56,7 @@ class FakePipeline:
         self.verifier = verifier or ChemistryVerifier()
         self.pedagogy = pedagogy or FakePedagogyAdapter()
         self.scene_planner = scene_planner or FakeScenePlanner()
+        self.tts_provider = tts_provider or FakeTTSProvider()
         self.max_correction_attempts = max_correction_attempts
 
     async def run(self, job: VideoResponse) -> None:
@@ -184,6 +187,29 @@ class FakePipeline:
                 completed_at=utc_now(),
             )
 
+        if stage == PipelineStageName.AUDIO_GENERATION:
+            scene_plan = self._read_scene_plan(job)
+            audio_artifacts = await generate_segment_audio(
+                video_id=job.id,
+                scene_plan=scene_plan,
+                artifacts=self.artifacts,
+                provider=self.tts_provider,
+            )
+            relative_path = f"stages/{stage.value}.json"
+            stage_artifact = self.artifacts.write(
+                job.id,
+                relative_path,
+                (f'{{"stage":"{stage.value}","segment_count":{len(audio_artifacts)}}}').encode("utf-8"),
+                "application/json",
+            )
+            return StageResult(
+                stage=stage,
+                status=StageResultStatus.SUCCEEDED,
+                artifacts=[*audio_artifacts, stage_artifact],
+                started_at=utc_now(),
+                completed_at=utc_now(),
+            )
+
         relative_path = f"stages/{stage.value}.json"
         content = (f'{{"stage":"{stage.value}","video_id":"{job.id}"}}').encode("utf-8")
         artifact = self.artifacts.write(job.id, relative_path, content, "application/json")
@@ -197,6 +223,12 @@ class FakePipeline:
             started_at=utc_now(),
             completed_at=utc_now(),
         )
+
+    def _read_scene_plan(self, job: VideoResponse):
+        from .domain import ScenePlan
+
+        path = self.artifacts.resolve(job.id, "scene_plan.json")
+        return ScenePlan.model_validate_json(path.read_text(encoding="utf-8"))
 
     def fail(
         self,
