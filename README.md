@@ -39,7 +39,6 @@
   <a href="media/sample-video.mp4">Watch the generated video</a>
 </video>
 
-[▶️ Open the sample video](media/sample-video.mp4)
 
 The tracked sample above is copied from a validated local pipeline run. New
 videos are generated under `artifacts/`, which remains excluded from version
