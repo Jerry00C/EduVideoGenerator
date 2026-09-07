@@ -35,9 +35,7 @@
 }
 ```
 
-<video src="media/sample-video.mp4" controls width="100%">
-  <a href="media/sample-video.mp4">Watch the generated video</a>
-</video>
+[▶ Watch the generated video](media/sample-video.mp4)
 
 
 The tracked sample above is copied from a validated local pipeline run. New
