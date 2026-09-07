@@ -35,7 +35,7 @@
 }
 ```
 
-[▶ Watch the generated video](media/sample-video.mp4)
+<video src="media/sample-video.mp4" width="600" controls></video>
 
 
 The tracked sample above is copied from a validated local pipeline run. New
