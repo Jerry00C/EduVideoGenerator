@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/4ded910c-ffa2-45e6-8701-6440ec3c1759
+
 <p align="center">
   <img src="media/readme-header.png" alt="Chemistry Video Generator — questions into verified visual lessons" width="100%">
 </p>
@@ -24,6 +28,9 @@
 </p>
 
 ## Sample video
+
+
+https://github.com/user-attachments/assets/83a7f5cd-9aa9-4a98-9153-5d7be05379c5
 
 **Question:** “What is the difference between an atom and a molecule?”
 
