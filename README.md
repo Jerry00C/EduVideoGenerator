@@ -1,8 +1,29 @@
-# Chemistry Video Generator — V1
+<p align="center">
+  <img src="media/readme-header.png" alt="Chemistry Video Generator — questions into verified visual lessons" width="100%">
+</p>
 
-Generate a verified, high-school-level chemistry explainer video from a single question.
+<h1 align="center">Chemistry Video Generator</h1>
 
-## Example
+<p align="center">
+  <strong>Generate a verified, high-school-level chemistry explainer video from a single question.</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white" alt="Python 3.9+">
+  <img src="https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Reasoning-GPT-7C3AED" alt="GPT reasoning">
+  <img src="https://img.shields.io/badge/Rendering-Manim-1C4C5B" alt="Manim rendering">
+  <img src="https://img.shields.io/badge/Output-1080p_video-E11D48" alt="1080p video">
+</p>
+
+<p align="center">
+  <a href="#sample-video">Sample video</a> ·
+  <a href="#v1-scope">Scope</a> ·
+  <a href="#architecture">Architecture</a> ·
+  <a href="#backend-architecture">API</a>
+</p>
+
+## Sample video
 
 **Question:** “What is the difference between an atom and a molecule?”
 
@@ -14,11 +35,15 @@ Generate a verified, high-school-level chemistry explainer video from a single q
 }
 ```
 
-▶️ [Watch the generated video](artifacts/vid_1a500da3acc6/final.mp4)
+<video src="media/sample-video.mp4" controls width="100%">
+  <a href="media/sample-video.mp4">Watch the generated video</a>
+</video>
 
-The example video is generated locally and stored under `artifacts/`, which is
-excluded from version control. Run the pipeline to generate your own videos in
-the same location.
+[▶️ Open the sample video](media/sample-video.mp4)
+
+The tracked sample above is copied from a validated local pipeline run. New
+videos are generated under `artifacts/`, which remains excluded from version
+control.
 
 ## V1 Scope
 
