@@ -1,7 +1,3 @@
-
-
-https://github.com/user-attachments/assets/4ded910c-ffa2-45e6-8701-6440ec3c1759
-
 <p align="center">
   <img src="media/readme-header.png" alt="Chemistry Video Generator — questions into verified visual lessons" width="100%">
 </p>
