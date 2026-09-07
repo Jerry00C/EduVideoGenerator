@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "target_id": "reasoning",
+      "check": "pydantic_schema",
+      "status": "pass",
+      "message": "ReasoningOutput passed strict Pydantic validation"
+    },
+    {
+      "target_id": "molecule_0",
+      "check": "rdkit",
+      "status": "pass",
+      "message": "validated: Oxygen molecule (O=O)"
+    },
+    {
+      "target_id": "molecule_1",
+      "check": "rdkit",
+      "status": "pass",
+      "message": "validated: Water (O)"
+    },
+    {
+      "target_id": "molecule_2",
+      "check": "rdkit",
+      "status": "pass",
+      "message": "validated: Carbon dioxide (O=C=O)"
+    }
+  ],
+  "required_corrections": [],
+  "attempt": 1
+}

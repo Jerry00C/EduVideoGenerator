@@ -1,0 +1,35 @@
+{
+  "learner_level": "high_school",
+  "explanation": "Intuition: Think of atoms as the basic building pieces for elements. An atom is the smallest unit of an element that still has that element’s chemical identity. For example, start with one hydrogen atom or one oxygen atom: each is a single particle of an element.\n\nMain idea 1 — Atom: An atom is one basic unit of an element.\n\nMain idea 2 — Molecule: When atoms form chemical bonds with each other, they can make a molecule. A molecule is a group of two or more atoms chemically bonded together.\n\nExamples: If two oxygen atoms bond together, they form an oxygen molecule, O2. If two hydrogen atoms bond with one oxygen atom, they form a water molecule, H2O. This shows that molecules can contain atoms of the same element, like oxygen gas, or atoms of different elements, like water.\n\nImportant exception: Not all substances are made of separate molecules. Salts like sodium chloride form large repeating ionic structures rather than individual molecules.\n\nSimple comparison: An atom is one basic unit, while a molecule is made from two or more bonded atoms.",
+  "learning_objectives": [
+    "Define an atom as the smallest unit of an element that still has that element’s chemical identity.",
+    "Define a molecule as two or more atoms chemically bonded together.",
+    "Distinguish between a single atom and a molecule using O2 and H2O as examples.",
+    "Recognize that not all substances are made of separate molecules."
+  ],
+  "misconceptions": [
+    "All molecules are compounds. Correction: A molecule like O2 has only one element, so it is not a compound.",
+    "All substances are made of molecules. Correction: Some substances, like metals and ionic salts, are made of extended structures rather than separate molecules.",
+    "An atom is always found alone. Correction: Many atoms are usually found bonded to other atoms in molecules or larger structures."
+  ],
+  "key_takeaways": [
+    "An atom is a single unit of an element.",
+    "A molecule is two or more atoms chemically bonded together.",
+    "Molecules may be made of the same kind of atom or different kinds of atoms."
+  ],
+  "clarification_required": false,
+  "source_ids": [
+    "concept_0",
+    "concept_1",
+    "concept_2",
+    "concept_3",
+    "reasoning_0",
+    "reasoning_1",
+    "reasoning_2",
+    "reasoning_3",
+    "reasoning_4",
+    "misconception_0",
+    "misconception_1",
+    "misconception_2"
+  ]
+}

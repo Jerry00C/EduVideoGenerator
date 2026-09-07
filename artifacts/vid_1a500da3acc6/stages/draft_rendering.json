@@ -1,0 +1,112 @@
+{
+  "stage": "draft_rendering",
+  "status": "succeeded",
+  "scene_count": 5,
+  "artifacts": [
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_1/final.py",
+      "path": "draft_visual/scene_1/final.py",
+      "media_type": "text/x-python",
+      "size_bytes": 4117,
+      "checksum_sha256": "6a8e90ed41ad2a3cfa2271814d3e770c1e91c1ebf23ea4c4c97f5545b1321cb1"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_1/final_code.json",
+      "path": "draft_visual/scene_1/final_code.json",
+      "media_type": "application/json",
+      "size_bytes": 255965,
+      "checksum_sha256": "0249813f30061ee13a690523caa927ccd5f38d6e40288f76d0e01c626ef3f7fa"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_1/scene.mp4",
+      "path": "draft_visual/scene_1/scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 431832,
+      "checksum_sha256": "7248bffa639ba903454c5a698e9f27e4cb2f7370626c736582abe31519cc9019"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_2/final.py",
+      "path": "draft_visual/scene_2/final.py",
+      "media_type": "text/x-python",
+      "size_bytes": 7517,
+      "checksum_sha256": "c32d09fa64090695974a6e518fd77eb677b63bca2427a0ec6743641b870363a1"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_2/final_code.json",
+      "path": "draft_visual/scene_2/final_code.json",
+      "media_type": "application/json",
+      "size_bytes": 320119,
+      "checksum_sha256": "499a2c3ae613866be1e2ecf115f0248aba3de9754d91f703784d0fef5c75ccf3"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_2/scene.mp4",
+      "path": "draft_visual/scene_2/scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 487647,
+      "checksum_sha256": "ae499d23dd4c2492a1ee13c1a27a807d47c15411016a5f0c639f60f1d3a207e4"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_3/final.py",
+      "path": "draft_visual/scene_3/final.py",
+      "media_type": "text/x-python",
+      "size_bytes": 8739,
+      "checksum_sha256": "005f35d806471826e78c3fcfa011261758acbe8f8489b5a99dc1ec3a4d65d777"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_3/final_code.json",
+      "path": "draft_visual/scene_3/final_code.json",
+      "media_type": "application/json",
+      "size_bytes": 295525,
+      "checksum_sha256": "b3474f47856d6d20890fe4bdae9c178a8424acba634259ee8ce265fd9b9c07ba"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_3/scene.mp4",
+      "path": "draft_visual/scene_3/scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 538966,
+      "checksum_sha256": "ccfd4d8457c966130644080c82aad2b8b98360aee4bd262a4a2b5b89ece56d4e"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_4/final.py",
+      "path": "draft_visual/scene_4/final.py",
+      "media_type": "text/x-python",
+      "size_bytes": 9325,
+      "checksum_sha256": "3d9fafeb342560a9dc5e62486047c7effc68a40453c2a72f6fb866d80bc1dce9"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_4/final_code.json",
+      "path": "draft_visual/scene_4/final_code.json",
+      "media_type": "application/json",
+      "size_bytes": 448876,
+      "checksum_sha256": "d04f00bb6cb17a43bf377a3eba220634f71deb75c042943ff1fe23c027f6e4bd"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_4/scene.mp4",
+      "path": "draft_visual/scene_4/scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 635036,
+      "checksum_sha256": "32c0325b892d29d1df17f2b2736f535a4f78def77a1ab4e4cc1fe2af078d69f3"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_5/final.py",
+      "path": "draft_visual/scene_5/final.py",
+      "media_type": "text/x-python",
+      "size_bytes": 7375,
+      "checksum_sha256": "11652c3b826ecf974bcaa832f6d7af9475ab076c5289e94acdae19dee98576e6"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_5/final_code.json",
+      "path": "draft_visual/scene_5/final_code.json",
+      "media_type": "application/json",
+      "size_bytes": 319432,
+      "checksum_sha256": "24cb1492658485ce300947b7d129829186cc2dc2e86b5388324916c2ed3f8f60"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:draft_visual/scene_5/scene.mp4",
+      "path": "draft_visual/scene_5/scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 430918,
+      "checksum_sha256": "f429807cee1255f7920d3c5e56dc5c73b7d9fc20ca5f6a885c8516a07f8d8b33"
+    }
+  ]
+}

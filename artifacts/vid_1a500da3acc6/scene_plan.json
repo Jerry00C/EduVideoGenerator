@@ -1,0 +1,706 @@
+{
+  "status": "ready",
+  "title": "Atoms and Molecules: What’s the Difference?",
+  "target_duration_seconds": 240,
+  "scenes": [
+    {
+      "id": "scene_1",
+      "purpose": "Build intuition by defining an atom as one basic unit of an element.",
+      "pedagogy_beat_ids": [
+        "pedagogy_plan.learning_objectives[0]",
+        "pedagogy_plan.teaching_sequence[0]"
+      ],
+      "estimated_duration_seconds": 48.0,
+      "narration_segments": [
+        {
+          "id": "narr_1_1",
+          "text": "To compare atoms and molecules, start with the atom.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[0]"
+          ]
+        },
+        {
+          "id": "narr_1_2",
+          "text": "An atom is the smallest unit of an element that still has that element’s chemical identity.",
+          "source_ids": [
+            "verified_chemistry.concepts[0]",
+            "verified_chemistry.learning_objectives[0]"
+          ]
+        },
+        {
+          "id": "narr_1_3",
+          "text": "So one hydrogen atom is a single particle of the element hydrogen.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[0]"
+          ]
+        },
+        {
+          "id": "narr_1_4",
+          "text": "One oxygen atom is a single particle of the element oxygen.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[0]"
+          ]
+        },
+        {
+          "id": "narr_1_5",
+          "text": "The key idea is simple: an atom is one basic unit of an element.",
+          "source_ids": [
+            "verified_chemistry.key_takeaways[0]",
+            "verified_chemistry.reasoning_steps[4]"
+          ]
+        }
+      ],
+      "visual_beats": [
+        {
+          "id": "vis_1_1",
+          "trigger_narration_id": "narr_1_1",
+          "trigger_phrase": "start with the atom",
+          "action": "Show a clean title card, then reveal one labeled sphere representing a single atom.",
+          "visual_type": "title",
+          "on_screen_text": "Atom vs. molecule",
+          "source_ids": [
+            "verified_chemistry.question"
+          ]
+        },
+        {
+          "id": "vis_1_2",
+          "trigger_narration_id": "narr_1_2",
+          "trigger_phrase": "smallest unit of an element",
+          "action": "Show one atom diagram inside a simple label box for element identity; highlight the single atom.",
+          "visual_type": "atom_diagram",
+          "on_screen_text": "Atom: one unit of an element",
+          "source_ids": [
+            "verified_chemistry.concepts[0]"
+          ]
+        },
+        {
+          "id": "vis_1_3",
+          "trigger_narration_id": "narr_1_3",
+          "trigger_phrase": "one hydrogen atom",
+          "action": "Replace the atom label with hydrogen atom; keep only one particle visible.",
+          "visual_type": "atom_diagram",
+          "on_screen_text": "One hydrogen atom",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[0]"
+          ]
+        },
+        {
+          "id": "vis_1_4",
+          "trigger_narration_id": "narr_1_4",
+          "trigger_phrase": "One oxygen atom",
+          "action": "Transform the labeled particle into one oxygen atom; keep the single-particle emphasis.",
+          "visual_type": "atom_diagram",
+          "on_screen_text": "One oxygen atom",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[0]"
+          ]
+        },
+        {
+          "id": "vis_1_5",
+          "trigger_narration_id": "narr_1_5",
+          "trigger_phrase": "one basic unit",
+          "action": "Add a simple summary label beside the single atom and dim all other text.",
+          "visual_type": "text",
+          "on_screen_text": "Atom = one basic unit",
+          "source_ids": [
+            "verified_chemistry.key_takeaways[0]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene_2",
+      "purpose": "Define a molecule as atoms chemically bonded together.",
+      "pedagogy_beat_ids": [
+        "pedagogy_plan.learning_objectives[1]",
+        "pedagogy_plan.teaching_sequence[0]"
+      ],
+      "estimated_duration_seconds": 45.0,
+      "narration_segments": [
+        {
+          "id": "narr_2_1",
+          "text": "Now imagine atoms forming chemical bonds with each other.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[1]"
+          ]
+        },
+        {
+          "id": "narr_2_2",
+          "text": "When atoms bond together, they can make a molecule.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[1]"
+          ]
+        },
+        {
+          "id": "narr_2_3",
+          "text": "A molecule is a group of two or more atoms chemically bonded together.",
+          "source_ids": [
+            "verified_chemistry.concepts[1]",
+            "verified_chemistry.learning_objectives[0]"
+          ]
+        },
+        {
+          "id": "narr_2_4",
+          "text": "That means a molecule is not just one atom by itself.",
+          "source_ids": [
+            "verified_chemistry.concepts[1]",
+            "verified_chemistry.reasoning_steps[4]"
+          ]
+        },
+        {
+          "id": "narr_2_5",
+          "text": "It is made from two or more bonded atoms acting as a distinct unit.",
+          "source_ids": [
+            "verified_chemistry.assumptions[1]",
+            "verified_chemistry.key_takeaways[1]"
+          ]
+        }
+      ],
+      "visual_beats": [
+        {
+          "id": "vis_2_1",
+          "trigger_narration_id": "narr_2_1",
+          "trigger_phrase": "chemical bonds",
+          "action": "Show two separate atoms moving close together; highlight the space where a bond will appear.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "Atoms can bond",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[1]"
+          ]
+        },
+        {
+          "id": "vis_2_2",
+          "trigger_narration_id": "narr_2_2",
+          "trigger_phrase": "make a molecule",
+          "action": "Draw a bond between the two atoms and group them with a soft outline.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "Bonded atoms form a molecule",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[1]"
+          ]
+        },
+        {
+          "id": "vis_2_3",
+          "trigger_narration_id": "narr_2_3",
+          "trigger_phrase": "two or more atoms",
+          "action": "Show a molecule diagram with two bonded atoms, then add a small label pointing to each atom and the bond.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "Molecule: 2 or more bonded atoms",
+          "source_ids": [
+            "verified_chemistry.concepts[1]"
+          ]
+        },
+        {
+          "id": "vis_2_4",
+          "trigger_narration_id": "narr_2_4",
+          "trigger_phrase": "not just one atom",
+          "action": "Place a single atom on the left and a bonded pair on the right; mark the pair as the molecule.",
+          "visual_type": "comparison_table",
+          "on_screen_text": "One atom ≠ molecule",
+          "source_ids": [
+            "verified_chemistry.concepts[1]",
+            "verified_chemistry.reasoning_steps[4]"
+          ]
+        },
+        {
+          "id": "vis_2_5",
+          "trigger_narration_id": "narr_2_5",
+          "trigger_phrase": "distinct unit",
+          "action": "Keep the bonded atoms grouped with one outline, emphasizing the molecule as one separate unit.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "A bonded distinct unit",
+          "source_ids": [
+            "verified_chemistry.assumptions[1]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene_3",
+      "purpose": "Use oxygen and water examples to distinguish same-element and different-element molecules.",
+      "pedagogy_beat_ids": [
+        "pedagogy_plan.learning_objectives[2]",
+        "pedagogy_plan.teaching_sequence[0]"
+      ],
+      "estimated_duration_seconds": 62.0,
+      "narration_segments": [
+        {
+          "id": "narr_3_1",
+          "text": "Let’s test the definition with oxygen gas.",
+          "source_ids": [
+            "verified_chemistry.concepts[2]",
+            "verified_chemistry.reasoning_steps[2]"
+          ]
+        },
+        {
+          "id": "narr_3_2",
+          "text": "If two oxygen atoms bond together, they form an oxygen molecule, O2.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[2]",
+            "verified_chemistry.molecules[0]"
+          ]
+        },
+        {
+          "id": "narr_3_3",
+          "text": "This molecule contains atoms of the same element, oxygen.",
+          "source_ids": [
+            "verified_chemistry.concepts[2]",
+            "verified_chemistry.common_misconceptions[0]"
+          ]
+        },
+        {
+          "id": "narr_3_4",
+          "text": "So not every molecule is a compound.",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[0]"
+          ]
+        },
+        {
+          "id": "narr_3_5",
+          "text": "Now compare that with water.",
+          "source_ids": [
+            "verified_chemistry.concepts[2]",
+            "verified_chemistry.reasoning_steps[3]",
+            "verified_chemistry.molecules[1]"
+          ]
+        },
+        {
+          "id": "narr_3_6",
+          "text": "If two hydrogen atoms bond with one oxygen atom, they form a water molecule, H2O.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[3]",
+            "verified_chemistry.molecules[1]"
+          ]
+        },
+        {
+          "id": "narr_3_7",
+          "text": "Water has atoms of different elements, hydrogen and oxygen.",
+          "source_ids": [
+            "verified_chemistry.concepts[2]",
+            "verified_chemistry.reasoning_steps[3]"
+          ]
+        },
+        {
+          "id": "narr_3_8",
+          "text": "So molecules may be made of the same kind of atom or different kinds of atoms.",
+          "source_ids": [
+            "verified_chemistry.key_takeaways[2]",
+            "verified_chemistry.concepts[2]"
+          ]
+        }
+      ],
+      "visual_beats": [
+        {
+          "id": "vis_3_1",
+          "trigger_narration_id": "narr_3_1",
+          "trigger_phrase": "oxygen gas",
+          "action": "Show two oxygen atoms separated, labeled as oxygen atoms, ready to bond.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "Example: oxygen gas",
+          "source_ids": [
+            "verified_chemistry.concepts[2]",
+            "verified_chemistry.reasoning_steps[2]"
+          ]
+        },
+        {
+          "id": "vis_3_2",
+          "trigger_narration_id": "narr_3_2",
+          "trigger_phrase": "two oxygen atoms bond",
+          "action": "Connect two oxygen atoms with a bond and label the resulting molecule O2.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "O2: oxygen molecule",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[2]",
+            "verified_chemistry.molecules[0]"
+          ]
+        },
+        {
+          "id": "vis_3_3",
+          "trigger_narration_id": "narr_3_3",
+          "trigger_phrase": "same element",
+          "action": "Color both oxygen atoms the same and add matching element labels.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "Same element",
+          "source_ids": [
+            "verified_chemistry.concepts[2]"
+          ]
+        },
+        {
+          "id": "vis_3_4",
+          "trigger_narration_id": "narr_3_4",
+          "trigger_phrase": "not every molecule",
+          "action": "Show a simple note beside O2: molecule, but not a compound; keep O2 visible.",
+          "visual_type": "text",
+          "on_screen_text": "O2 is not a compound",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[0]"
+          ]
+        },
+        {
+          "id": "vis_3_5",
+          "trigger_narration_id": "narr_3_5",
+          "trigger_phrase": "water",
+          "action": "Transition to one oxygen atom and two hydrogen atoms arranged near each other.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "Example: water",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[3]",
+            "verified_chemistry.molecules[1]"
+          ]
+        },
+        {
+          "id": "vis_3_6",
+          "trigger_narration_id": "narr_3_6",
+          "trigger_phrase": "two hydrogen atoms bond",
+          "action": "Draw bonds from the oxygen atom to two hydrogen atoms and label the molecule H2O.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "H2O: water molecule",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[3]",
+            "verified_chemistry.molecules[1]"
+          ]
+        },
+        {
+          "id": "vis_3_7",
+          "trigger_narration_id": "narr_3_7",
+          "trigger_phrase": "different elements",
+          "action": "Use two colors: one for hydrogen atoms and one for the oxygen atom; add short labels.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "Different elements",
+          "source_ids": [
+            "verified_chemistry.concepts[2]",
+            "verified_chemistry.reasoning_steps[3]"
+          ]
+        },
+        {
+          "id": "vis_3_8",
+          "trigger_narration_id": "narr_3_8",
+          "trigger_phrase": "same kind of atom or different kinds",
+          "action": "Show O2 and H2O side by side with a shared heading that both are molecules.",
+          "visual_type": "comparison_table",
+          "on_screen_text": "Molecules can vary",
+          "source_ids": [
+            "verified_chemistry.key_takeaways[2]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene_4",
+      "purpose": "Correct key misconceptions about molecules and substances.",
+      "pedagogy_beat_ids": [
+        "pedagogy_plan.misconceptions_to_correct[0]",
+        "pedagogy_plan.misconceptions_to_correct[1]",
+        "pedagogy_plan.misconceptions_to_correct[2]",
+        "pedagogy_plan.learning_objectives[3]"
+      ],
+      "estimated_duration_seconds": 52.0,
+      "narration_segments": [
+        {
+          "id": "narr_4_1",
+          "text": "Here are three common traps to avoid.",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[0]",
+            "verified_chemistry.common_misconceptions[1]",
+            "verified_chemistry.common_misconceptions[2]"
+          ]
+        },
+        {
+          "id": "narr_4_2",
+          "text": "First, all compounds are not the same idea as all molecules.",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[0]"
+          ]
+        },
+        {
+          "id": "narr_4_3",
+          "text": "An oxygen molecule, O2, has only one element, so it is not a compound.",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[0]",
+            "verified_chemistry.reasoning_steps[2]"
+          ]
+        },
+        {
+          "id": "narr_4_4",
+          "text": "Second, not all substances are made of separate molecules.",
+          "source_ids": [
+            "verified_chemistry.concepts[3]",
+            "verified_chemistry.common_misconceptions[1]"
+          ]
+        },
+        {
+          "id": "narr_4_5",
+          "text": "Salts like sodium chloride form large repeating ionic structures rather than individual molecules.",
+          "source_ids": [
+            "verified_chemistry.concepts[3]"
+          ]
+        },
+        {
+          "id": "narr_4_6",
+          "text": "Third, an atom is not always found alone.",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[2]"
+          ]
+        },
+        {
+          "id": "narr_4_7",
+          "text": "Many atoms are usually found bonded to other atoms in molecules or larger structures.",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[2]"
+          ]
+        }
+      ],
+      "visual_beats": [
+        {
+          "id": "vis_4_1",
+          "trigger_narration_id": "narr_4_1",
+          "trigger_phrase": "three common traps",
+          "action": "Show three short misconception cards labeled molecule, substance, and atom.",
+          "visual_type": "text",
+          "on_screen_text": "Three common traps",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[0]",
+            "verified_chemistry.common_misconceptions[1]",
+            "verified_chemistry.common_misconceptions[2]"
+          ]
+        },
+        {
+          "id": "vis_4_2",
+          "trigger_narration_id": "narr_4_2",
+          "trigger_phrase": "all compounds",
+          "action": "Show a comparison card separating the words molecule and compound without adding new definitions.",
+          "visual_type": "comparison_table",
+          "on_screen_text": "Molecule ≠ always compound",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[0]"
+          ]
+        },
+        {
+          "id": "vis_4_3",
+          "trigger_narration_id": "narr_4_3",
+          "trigger_phrase": "only one element",
+          "action": "Return to the O2 molecule; highlight both atoms with the same color and label as one element.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "O2: one element",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[0]",
+            "verified_chemistry.reasoning_steps[2]"
+          ]
+        },
+        {
+          "id": "vis_4_4",
+          "trigger_narration_id": "narr_4_4",
+          "trigger_phrase": "not all substances",
+          "action": "Show a split screen: separate molecule unit on one side and repeating structure pattern on the other.",
+          "visual_type": "comparison_table",
+          "on_screen_text": "Not all substances are molecules",
+          "source_ids": [
+            "verified_chemistry.concepts[3]",
+            "verified_chemistry.common_misconceptions[1]"
+          ]
+        },
+        {
+          "id": "vis_4_5",
+          "trigger_narration_id": "narr_4_5",
+          "trigger_phrase": "sodium chloride",
+          "action": "Show a large repeating grid labeled sodium chloride, with no single molecule circled.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "Sodium chloride: repeating structure",
+          "source_ids": [
+            "verified_chemistry.concepts[3]"
+          ]
+        },
+        {
+          "id": "vis_4_6",
+          "trigger_narration_id": "narr_4_6",
+          "trigger_phrase": "not always found alone",
+          "action": "Show a single atom fading into a group of bonded atoms to correct the idea of always being alone.",
+          "visual_type": "atom_diagram",
+          "on_screen_text": "Atoms are not always alone",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[2]"
+          ]
+        },
+        {
+          "id": "vis_4_7",
+          "trigger_narration_id": "narr_4_7",
+          "trigger_phrase": "bonded to other atoms",
+          "action": "Show atoms bonded in a molecule beside atoms continuing into a larger repeating structure.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "Bonded in molecules or structures",
+          "source_ids": [
+            "verified_chemistry.common_misconceptions[2]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scene_5",
+      "purpose": "Recap the simple comparison between atoms and molecules.",
+      "pedagogy_beat_ids": [
+        "pedagogy_plan.recap_points[0]",
+        "pedagogy_plan.recap_points[1]",
+        "pedagogy_plan.recap_points[2]"
+      ],
+      "estimated_duration_seconds": 33.0,
+      "narration_segments": [
+        {
+          "id": "narr_5_1",
+          "text": "So the shortest comparison is this.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[4]"
+          ]
+        },
+        {
+          "id": "narr_5_2",
+          "text": "An atom is one basic unit of an element.",
+          "source_ids": [
+            "verified_chemistry.key_takeaways[0]",
+            "verified_chemistry.reasoning_steps[4]"
+          ]
+        },
+        {
+          "id": "narr_5_3",
+          "text": "A molecule is two or more atoms chemically bonded together.",
+          "source_ids": [
+            "verified_chemistry.key_takeaways[1]",
+            "verified_chemistry.concepts[1]"
+          ]
+        },
+        {
+          "id": "narr_5_4",
+          "text": "O2 shows that a molecule can have atoms of the same element.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[2]",
+            "verified_chemistry.concepts[2]"
+          ]
+        },
+        {
+          "id": "narr_5_5",
+          "text": "H2O shows that a molecule can have atoms of different elements.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[3]",
+            "verified_chemistry.concepts[2]"
+          ]
+        },
+        {
+          "id": "narr_5_6",
+          "text": "Keep that difference in mind, and atom versus molecule becomes much clearer.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[4]"
+          ]
+        }
+      ],
+      "visual_beats": [
+        {
+          "id": "vis_5_1",
+          "trigger_narration_id": "narr_5_1",
+          "trigger_phrase": "shortest comparison",
+          "action": "Bring up a clean two-column comparison table titled atom and molecule.",
+          "visual_type": "comparison_table",
+          "on_screen_text": "Atom vs. molecule",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[4]"
+          ]
+        },
+        {
+          "id": "vis_5_2",
+          "trigger_narration_id": "narr_5_2",
+          "trigger_phrase": "one basic unit",
+          "action": "Fill the atom column with one single atom icon and its short definition.",
+          "visual_type": "comparison_table",
+          "on_screen_text": "Atom: one unit",
+          "source_ids": [
+            "verified_chemistry.key_takeaways[0]"
+          ]
+        },
+        {
+          "id": "vis_5_3",
+          "trigger_narration_id": "narr_5_3",
+          "trigger_phrase": "two or more atoms",
+          "action": "Fill the molecule column with two bonded atoms and its short definition.",
+          "visual_type": "comparison_table",
+          "on_screen_text": "Molecule: bonded atoms",
+          "source_ids": [
+            "verified_chemistry.key_takeaways[1]",
+            "verified_chemistry.concepts[1]"
+          ]
+        },
+        {
+          "id": "vis_5_4",
+          "trigger_narration_id": "narr_5_4",
+          "trigger_phrase": "same element",
+          "action": "Add O2 under molecule examples and highlight the matching oxygen atoms.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "O2: same element",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[2]",
+            "verified_chemistry.concepts[2]"
+          ]
+        },
+        {
+          "id": "vis_5_5",
+          "trigger_narration_id": "narr_5_5",
+          "trigger_phrase": "different elements",
+          "action": "Add H2O under molecule examples and highlight hydrogen and oxygen with different colors.",
+          "visual_type": "molecule_diagram",
+          "on_screen_text": "H2O: different elements",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[3]",
+            "verified_chemistry.concepts[2]"
+          ]
+        },
+        {
+          "id": "vis_5_6",
+          "trigger_narration_id": "narr_5_6",
+          "trigger_phrase": "atom versus molecule",
+          "action": "End on the complete comparison table with atom, molecule, O2, and H2O visible.",
+          "visual_type": "comparison_table",
+          "on_screen_text": "Atom: one. Molecule: bonded group.",
+          "source_ids": [
+            "verified_chemistry.reasoning_steps[4]"
+          ]
+        }
+      ]
+    }
+  ],
+  "audio_plan": {
+    "voice_style": "friendly and clear teenage science tutor",
+    "speaking_rate": "135 words per minute",
+    "segment_ids": [
+      "narr_1_1",
+      "narr_1_2",
+      "narr_1_3",
+      "narr_1_4",
+      "narr_1_5",
+      "narr_2_1",
+      "narr_2_2",
+      "narr_2_3",
+      "narr_2_4",
+      "narr_2_5",
+      "narr_3_1",
+      "narr_3_2",
+      "narr_3_3",
+      "narr_3_4",
+      "narr_3_5",
+      "narr_3_6",
+      "narr_3_7",
+      "narr_3_8",
+      "narr_4_1",
+      "narr_4_2",
+      "narr_4_3",
+      "narr_4_4",
+      "narr_4_5",
+      "narr_4_6",
+      "narr_4_7",
+      "narr_5_1",
+      "narr_5_2",
+      "narr_5_3",
+      "narr_5_4",
+      "narr_5_5",
+      "narr_5_6"
+    ]
+  },
+  "estimated_total_duration_seconds": 240.0,
+  "planning_warnings": []
+}

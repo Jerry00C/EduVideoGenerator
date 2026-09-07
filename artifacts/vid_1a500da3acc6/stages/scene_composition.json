@@ -1,0 +1,336 @@
+{
+  "stage": "scene_composition",
+  "status": "succeeded",
+  "scene_count": 5,
+  "artifacts": [
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_1/draft_scene.mp4",
+      "path": "scene_composition/scene_1/draft_scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 431832,
+      "checksum_sha256": "7248bffa639ba903454c5a698e9f27e4cb2f7370626c736582abe31519cc9019"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_1/audio/narr_1_1.mp3",
+      "path": "scene_composition/scene_1/audio/narr_1_1.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 61056,
+      "checksum_sha256": "9d07878cff9b85814707afd191065d7f822547879dd9ca214681d855e5d63d3f"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_1/audio/narr_1_2.mp3",
+      "path": "scene_composition/scene_1/audio/narr_1_2.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 84096,
+      "checksum_sha256": "440500101ac61af5efd4b04923620c61302f93003519aa1d7d08961e48924b14"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_1/audio/narr_1_3.mp3",
+      "path": "scene_composition/scene_1/audio/narr_1_3.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 81024,
+      "checksum_sha256": "918ef101c178d9e4ca92f2601b761e8147557ed1ef08876890fc2bb09a9aabc6"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_1/audio/narr_1_4.mp3",
+      "path": "scene_composition/scene_1/audio/narr_1_4.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 81792,
+      "checksum_sha256": "f6b634183db53ceb9f43fcbf24778ab05ae0471289037ed86e1415a11109ed8c"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_1/audio/narr_1_5.mp3",
+      "path": "scene_composition/scene_1/audio/narr_1_5.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 83328,
+      "checksum_sha256": "602dea71faeb3e52e5cf401475634335198111e21586e29cfaca9ef6c2f9b9a9"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_1/narration.mp3",
+      "path": "scene_composition/scene_1/narration.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 98252,
+      "checksum_sha256": "f992a5e24589d3c1334a53378a0cc7ccbf185e2b10464b7055371033ef1bc490"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_1/scene.mp4",
+      "path": "scene_composition/scene_1/scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 905242,
+      "checksum_sha256": "2e304156d0b5c1f51c8d30d5969046407a02e7237c0b0b073ade8f779c776ad9"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_2/draft_scene.mp4",
+      "path": "scene_composition/scene_2/draft_scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 487647,
+      "checksum_sha256": "ae499d23dd4c2492a1ee13c1a27a807d47c15411016a5f0c639f60f1d3a207e4"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_2/audio/narr_2_1.mp3",
+      "path": "scene_composition/scene_2/audio/narr_2_1.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 75264,
+      "checksum_sha256": "81d0c6b6e43a265d18f4db067ff9ddd9bb792d19b6ecc696139cad47ba9232b5"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_2/audio/narr_2_2.mp3",
+      "path": "scene_composition/scene_2/audio/narr_2_2.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 61824,
+      "checksum_sha256": "b9b5f382b26d8d28229f858a640df7147578a29af408ce26447a34c741d9f7ef"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_2/audio/narr_2_3.mp3",
+      "path": "scene_composition/scene_2/audio/narr_2_3.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 74496,
+      "checksum_sha256": "40409b308e6af1cad425c1b4fb8568b6feba081cc419660a6af34675f5370371"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_2/audio/narr_2_4.mp3",
+      "path": "scene_composition/scene_2/audio/narr_2_4.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 66432,
+      "checksum_sha256": "9d0c318a1e3198a1a7d509ae2246c455d7d8d64a40719c8566383a7f485b47a1"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_2/audio/narr_2_5.mp3",
+      "path": "scene_composition/scene_2/audio/narr_2_5.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 75264,
+      "checksum_sha256": "a35eb9c14592de5ac08f9cc45c3023f9d9530e1e7599ce59b7062c7288aee830"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_2/narration.mp3",
+      "path": "scene_composition/scene_2/narration.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 88748,
+      "checksum_sha256": "ced1ddd9a921cfec470668e57b31684728cfe72be1073c0bed35b9e4006dd69e"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_2/scene.mp4",
+      "path": "scene_composition/scene_2/scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 877733,
+      "checksum_sha256": "8724d9a2dc0397ccd7a376091b09405c1bb90363e554e6662b5bc464e6122eb6"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/draft_scene.mp4",
+      "path": "scene_composition/scene_3/draft_scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 538966,
+      "checksum_sha256": "ccfd4d8457c966130644080c82aad2b8b98360aee4bd262a4a2b5b89ece56d4e"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/audio/narr_3_1.mp3",
+      "path": "scene_composition/scene_3/audio/narr_3_1.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 58368,
+      "checksum_sha256": "ecaf4c854367d5785484000971c99d4ab67ebf7bc7a7494db18888c3c8e5c59c"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/audio/narr_3_2.mp3",
+      "path": "scene_composition/scene_3/audio/narr_3_2.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 91392,
+      "checksum_sha256": "b3305dbcdd5d1991a5143cf9cd408874c18b12ceae18fd21359d6a54a9e3efda"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/audio/narr_3_3.mp3",
+      "path": "scene_composition/scene_3/audio/narr_3_3.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 82560,
+      "checksum_sha256": "01cdc7a2966592118e3569304e7195cb96ae9d0724b927f2953c93510ac3e5bc"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/audio/narr_3_4.mp3",
+      "path": "scene_composition/scene_3/audio/narr_3_4.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 47232,
+      "checksum_sha256": "e6f3acd69564e2de3634b4ae186712f2fb005ef4cc03f6348a7fd4a0066213ca"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/audio/narr_3_5.mp3",
+      "path": "scene_composition/scene_3/audio/narr_3_5.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 35328,
+      "checksum_sha256": "62b85a99e96090812a6853a16faac2d2a16088b317c438909347ff29892925ab"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/audio/narr_3_6.mp3",
+      "path": "scene_composition/scene_3/audio/narr_3_6.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 100992,
+      "checksum_sha256": "bb8b891890efe192c36ca6c9651590b5cbe1f494f3a970dd0a60b4fdfc6700f4"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/audio/narr_3_7.mp3",
+      "path": "scene_composition/scene_3/audio/narr_3_7.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 76032,
+      "checksum_sha256": "42dde87c17d20673f992e504cefcf9fbda5be0975d141ee2907231ac1f65e67b"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/audio/narr_3_8.mp3",
+      "path": "scene_composition/scene_3/audio/narr_3_8.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 95232,
+      "checksum_sha256": "a7c9e7d46d07243dcebec1db338160becefd0a3e6a3fd4147c8082314bd7556e"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/narration.mp3",
+      "path": "scene_composition/scene_3/narration.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 147212,
+      "checksum_sha256": "64bb47f0b0f278069b980da07b8dc7435a68e7cf6f26884a03826541f5b0fd29"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_3/scene.mp4",
+      "path": "scene_composition/scene_3/scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 1269096,
+      "checksum_sha256": "812b5eee083e3b17f9948321247674d3f46d033e238efdaa2ce8c15aa663adc3"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_4/draft_scene.mp4",
+      "path": "scene_composition/scene_4/draft_scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 635036,
+      "checksum_sha256": "32c0325b892d29d1df17f2b2736f535a4f78def77a1ab4e4cc1fe2af078d69f3"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_4/audio/narr_4_1.mp3",
+      "path": "scene_composition/scene_4/audio/narr_4_1.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 41088,
+      "checksum_sha256": "c3d3c034feb3fff4c2c28d2eee6b527c972fe6be176f946b525a9ec2b2db2f19"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_4/audio/narr_4_2.mp3",
+      "path": "scene_composition/scene_4/audio/narr_4_2.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 69888,
+      "checksum_sha256": "7ebe7c5338bf3814defa35799f87ecf3bce15865c4b167fcfcc0f3522b84d57f"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_4/audio/narr_4_3.mp3",
+      "path": "scene_composition/scene_4/audio/narr_4_3.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 100992,
+      "checksum_sha256": "efbc2e3a296a5b21eddf97946150a0664213dc0b1d0c647db119c957544e5747"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_4/audio/narr_4_4.mp3",
+      "path": "scene_composition/scene_4/audio/narr_4_4.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 61824,
+      "checksum_sha256": "306a4815ca8ce38c603a271c1fd15506afd1b4e0dfb085db1d825ab5c243152a"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_4/audio/narr_4_5.mp3",
+      "path": "scene_composition/scene_4/audio/narr_4_5.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 114432,
+      "checksum_sha256": "4881d16da8240aac29873c52648f6963c5b7d2bfbf44cf3a685b9f3d54f491f3"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_4/audio/narr_4_6.mp3",
+      "path": "scene_composition/scene_4/audio/narr_4_6.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 52224,
+      "checksum_sha256": "420740cd66ab8fe90408cc6c00cbb6841def15cf6b91ad134b90209daf6f88d8"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_4/audio/narr_4_7.mp3",
+      "path": "scene_composition/scene_4/audio/narr_4_7.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 103296,
+      "checksum_sha256": "cc6d5967dbe327c059cababeb90e80d4fbc886806ab0ff0441cecbd954aa0f20"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_4/narration.mp3",
+      "path": "scene_composition/scene_4/narration.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 136364,
+      "checksum_sha256": "402435ee44b36b00c3eba2d073ab7d50c42aff456bfbd061e740d571794966b4"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_4/scene.mp4",
+      "path": "scene_composition/scene_4/scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 1277694,
+      "checksum_sha256": "d95b3e12a06b38441d75ea9049227b70b36e7c75ef4fd554fe776b0b3f179250"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_5/draft_scene.mp4",
+      "path": "scene_composition/scene_5/draft_scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 430918,
+      "checksum_sha256": "f429807cee1255f7920d3c5e56dc5c73b7d9fc20ca5f6a885c8516a07f8d8b33"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_5/audio/narr_5_1.mp3",
+      "path": "scene_composition/scene_5/audio/narr_5_1.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 57600,
+      "checksum_sha256": "296ee21ff531c887bee7ce3c3c57dda56983a3bfee0adf28e8fe1a5378166751"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_5/audio/narr_5_2.mp3",
+      "path": "scene_composition/scene_5/audio/narr_5_2.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 56832,
+      "checksum_sha256": "514e2400f3caab39cf109b7f439dc6b062784740e7a39814843dda368115462f"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_5/audio/narr_5_3.mp3",
+      "path": "scene_composition/scene_5/audio/narr_5_3.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 63360,
+      "checksum_sha256": "7eb857a0fad5bc6dc5e2f5aae0c05f8190fb8a27065d1bb9bd0c7c12d38551d1"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_5/audio/narr_5_4.mp3",
+      "path": "scene_composition/scene_5/audio/narr_5_4.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 70656,
+      "checksum_sha256": "2004a8c48069fdfe085d10d5a9ebc590926e85c3d14deae25aa9e0da995380cc"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_5/audio/narr_5_5.mp3",
+      "path": "scene_composition/scene_5/audio/narr_5_5.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 96768,
+      "checksum_sha256": "e34d8e65470e2b494b371f581d7119a145aaf294ca9098b80675ed9c9ee46883"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_5/audio/narr_5_6.mp3",
+      "path": "scene_composition/scene_5/audio/narr_5_6.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 83328,
+      "checksum_sha256": "fed09571c555b3efc7efed77e99717b1f2ce2ea6ca41793c15fc0b1acd75e46f"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_5/narration.mp3",
+      "path": "scene_composition/scene_5/narration.mp3",
+      "media_type": "audio/mpeg",
+      "size_bytes": 107564,
+      "checksum_sha256": "1dc18c63ac571f4d510425770cd3fd47e5695adb291159142abe590151ff94c1"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/scene_5/scene.mp4",
+      "path": "scene_composition/scene_5/scene.mp4",
+      "media_type": "video/mp4",
+      "size_bytes": 839238,
+      "checksum_sha256": "b03e2b62fb76723ffc6855400520f2d550272398bfbb265ac626d30853684ee7"
+    },
+    {
+      "artifact_id": "vid_1a500da3acc6:scene_composition/composition.json",
+      "path": "scene_composition/composition.json",
+      "media_type": "application/json",
+      "size_bytes": 3483,
+      "checksum_sha256": "088ec5f474f155638533d93a92b65ebfe408f21c3954b4572eccd1d7573f8a39"
+    }
+  ]
+}

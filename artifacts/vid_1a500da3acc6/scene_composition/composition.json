@@ -1,0 +1,113 @@
+{
+  "stage": "scene_composition",
+  "status": "succeeded",
+  "scenes": [
+    {
+      "scene_id": "scene_1",
+      "draft_video": "scene_composition/scene_1/draft_scene.mp4",
+      "audio_segments": [
+        "scene_composition/scene_1/audio/narr_1_1.mp3",
+        "scene_composition/scene_1/audio/narr_1_2.mp3",
+        "scene_composition/scene_1/audio/narr_1_3.mp3",
+        "scene_composition/scene_1/audio/narr_1_4.mp3",
+        "scene_composition/scene_1/audio/narr_1_5.mp3"
+      ],
+      "narration_segment_ids": [
+        "narr_1_1",
+        "narr_1_2",
+        "narr_1_3",
+        "narr_1_4",
+        "narr_1_5"
+      ],
+      "status": "composed"
+    },
+    {
+      "scene_id": "scene_2",
+      "draft_video": "scene_composition/scene_2/draft_scene.mp4",
+      "audio_segments": [
+        "scene_composition/scene_2/audio/narr_2_1.mp3",
+        "scene_composition/scene_2/audio/narr_2_2.mp3",
+        "scene_composition/scene_2/audio/narr_2_3.mp3",
+        "scene_composition/scene_2/audio/narr_2_4.mp3",
+        "scene_composition/scene_2/audio/narr_2_5.mp3"
+      ],
+      "narration_segment_ids": [
+        "narr_2_1",
+        "narr_2_2",
+        "narr_2_3",
+        "narr_2_4",
+        "narr_2_5"
+      ],
+      "status": "composed"
+    },
+    {
+      "scene_id": "scene_3",
+      "draft_video": "scene_composition/scene_3/draft_scene.mp4",
+      "audio_segments": [
+        "scene_composition/scene_3/audio/narr_3_1.mp3",
+        "scene_composition/scene_3/audio/narr_3_2.mp3",
+        "scene_composition/scene_3/audio/narr_3_3.mp3",
+        "scene_composition/scene_3/audio/narr_3_4.mp3",
+        "scene_composition/scene_3/audio/narr_3_5.mp3",
+        "scene_composition/scene_3/audio/narr_3_6.mp3",
+        "scene_composition/scene_3/audio/narr_3_7.mp3",
+        "scene_composition/scene_3/audio/narr_3_8.mp3"
+      ],
+      "narration_segment_ids": [
+        "narr_3_1",
+        "narr_3_2",
+        "narr_3_3",
+        "narr_3_4",
+        "narr_3_5",
+        "narr_3_6",
+        "narr_3_7",
+        "narr_3_8"
+      ],
+      "status": "composed"
+    },
+    {
+      "scene_id": "scene_4",
+      "draft_video": "scene_composition/scene_4/draft_scene.mp4",
+      "audio_segments": [
+        "scene_composition/scene_4/audio/narr_4_1.mp3",
+        "scene_composition/scene_4/audio/narr_4_2.mp3",
+        "scene_composition/scene_4/audio/narr_4_3.mp3",
+        "scene_composition/scene_4/audio/narr_4_4.mp3",
+        "scene_composition/scene_4/audio/narr_4_5.mp3",
+        "scene_composition/scene_4/audio/narr_4_6.mp3",
+        "scene_composition/scene_4/audio/narr_4_7.mp3"
+      ],
+      "narration_segment_ids": [
+        "narr_4_1",
+        "narr_4_2",
+        "narr_4_3",
+        "narr_4_4",
+        "narr_4_5",
+        "narr_4_6",
+        "narr_4_7"
+      ],
+      "status": "composed"
+    },
+    {
+      "scene_id": "scene_5",
+      "draft_video": "scene_composition/scene_5/draft_scene.mp4",
+      "audio_segments": [
+        "scene_composition/scene_5/audio/narr_5_1.mp3",
+        "scene_composition/scene_5/audio/narr_5_2.mp3",
+        "scene_composition/scene_5/audio/narr_5_3.mp3",
+        "scene_composition/scene_5/audio/narr_5_4.mp3",
+        "scene_composition/scene_5/audio/narr_5_5.mp3",
+        "scene_composition/scene_5/audio/narr_5_6.mp3"
+      ],
+      "narration_segment_ids": [
+        "narr_5_1",
+        "narr_5_2",
+        "narr_5_3",
+        "narr_5_4",
+        "narr_5_5",
+        "narr_5_6"
+      ],
+      "status": "composed"
+    }
+  ]
+}

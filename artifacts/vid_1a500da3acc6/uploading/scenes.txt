@@ -1,0 +1,5 @@
+file '/Users/tot/Documents/Dev/EduVideoGenerator/artifacts/vid_1a500da3acc6/scene_composition/scene_1/scene.mp4'
+file '/Users/tot/Documents/Dev/EduVideoGenerator/artifacts/vid_1a500da3acc6/scene_composition/scene_2/scene.mp4'
+file '/Users/tot/Documents/Dev/EduVideoGenerator/artifacts/vid_1a500da3acc6/scene_composition/scene_3/scene.mp4'
+file '/Users/tot/Documents/Dev/EduVideoGenerator/artifacts/vid_1a500da3acc6/scene_composition/scene_4/scene.mp4'
+file '/Users/tot/Documents/Dev/EduVideoGenerator/artifacts/vid_1a500da3acc6/scene_composition/scene_5/scene.mp4'

@@ -1,0 +1,52 @@
+{
+  "question": "What is the difference between an atom and a molecule?",
+  "learning_objectives": [
+    "Define an atom and a molecule.",
+    "Explain how atoms combine to form molecules.",
+    "Distinguish between elements, compounds, atoms, and molecules using examples."
+  ],
+  "concepts": [
+    "An atom is the smallest unit of an element that still has that element’s chemical identity.",
+    "A molecule is a group of two or more atoms chemically bonded together.",
+    "Molecules can contain atoms of the same element, such as oxygen gas, or atoms of different elements, such as water.",
+    "Not all substances are made of separate molecules; for example, salts like sodium chloride form large repeating ionic structures rather than individual molecules."
+  ],
+  "equations": [],
+  "reactions": [],
+  "molecules": [
+    {
+      "name": "Oxygen molecule",
+      "smiles": "O=O"
+    },
+    {
+      "name": "Water",
+      "smiles": "O"
+    },
+    {
+      "name": "Carbon dioxide",
+      "smiles": "O=C=O"
+    }
+  ],
+  "reasoning_steps": [
+    "Start with an atom: it is a single particle of an element, such as one hydrogen atom or one oxygen atom.",
+    "When atoms form chemical bonds with each other, they can make a molecule.",
+    "If two oxygen atoms bond together, they form an oxygen molecule, O2.",
+    "If two hydrogen atoms bond with one oxygen atom, they form a water molecule, H2O.",
+    "So, an atom is one basic unit, while a molecule is made from two or more bonded atoms."
+  ],
+  "assumptions": [
+    "The explanation is using basic high-school chemistry definitions.",
+    "The term molecule refers to atoms held together by chemical bonds as a distinct unit."
+  ],
+  "common_misconceptions": [
+    "Misconception: All molecules are compounds. Correction: A molecule like O2 has only one element, so it is not a compound.",
+    "Misconception: All substances are made of molecules. Correction: Some substances, like metals and ionic salts, are made of extended structures rather than separate molecules.",
+    "Misconception: An atom is always found alone. Correction: Many atoms are usually found bonded to other atoms in molecules or larger structures."
+  ],
+  "key_takeaways": [
+    "An atom is a single unit of an element.",
+    "A molecule is two or more atoms chemically bonded together.",
+    "Molecules may be made of the same kind of atom or different kinds of atoms."
+  ],
+  "references": []
+}

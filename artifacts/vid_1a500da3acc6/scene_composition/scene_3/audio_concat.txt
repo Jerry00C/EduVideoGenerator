@@ -1,0 +1,8 @@
+file 'audio/narr_3_1.mp3'
+file 'audio/narr_3_2.mp3'
+file 'audio/narr_3_3.mp3'
+file 'audio/narr_3_4.mp3'
+file 'audio/narr_3_5.mp3'
+file 'audio/narr_3_6.mp3'
+file 'audio/narr_3_7.mp3'
+file 'audio/narr_3_8.mp3'
